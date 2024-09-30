@@ -1,0 +1,13 @@
+﻿@using ASPMVCSHOP.Models
+@model IEnumerable<Product>
+@foreach(var p in Model)
+{
+    <div>
+        <h2>@p.ProductId</h2>
+        <h3>@p.Name</h3>
+        @p.Description
+        <h4>@p.Price.ToString("c", new System.Globalization.CultureInfo("uk-UA"))</h4>
+        <h5>@p.Category</h5>
+        <h5></h5>
+    </div>
+}
